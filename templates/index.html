@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- we do the this because all the pages would extend this page ane then have their own content per page. -->
+    <title>Wireshark webapp UI</title>
+</head>
+<body>
+    
+    <form name="form" method="POST" action=".">
+        <div>
+            <input type="text" name="command" placeholder="Command">
+        </div>
+        <div>
+            <input type="button" name="submit" value="Search">
+        </div>
+    </form>
+    {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+</body>
+</html>
